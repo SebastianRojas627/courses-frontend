@@ -1,7 +1,14 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { AuthLayout } from "../layouts/AuthLayout";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useStore } from "../../context/ContextProvider";
+import { types } from "../../context/reducer";
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
+  const { auth } = useStore();
+  const dispatch = useDispatch();
+
   type User = {
     name: String;
     lastname: String;
@@ -17,7 +24,16 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm<User>();
 
-  const onSubmit: SubmitHandler<User> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<User> = (data) => {
+    console.log(data, auth);
+    dispatch({ type: types.login });
+    navigate("/");
+    console.log(auth);
+  };
+
+  const toLogin = () => {
+    navigate("/auth/login");
+  };
 
   return (
     <AuthLayout title="Create Account">
@@ -81,6 +97,12 @@ const RegisterPage = () => {
             Register
           </button>
         </form>
+        <button
+          className="mt-5 ml-2 text-gray-500 hover:text-gray-950"
+          onClick={() => toLogin()}
+        >
+          Back
+        </button>
       </div>
     </AuthLayout>
   );

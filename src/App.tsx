@@ -1,15 +1,15 @@
-"use client";
-
-import { VideoPage } from "./app/pages/VideoPage";
+import ContextProvider from "./context/ContextProvider";
 import { CoursesRouter } from "./routes/CoursesRouter";
 import { BrowserRouter } from "react-router-dom";
 
 export default function Home() {
   return (
-   /* <BrowserRouter>
-      <CoursesRouter />
-    </BrowserRouter>*/
-    //<Dashboard />
-    <VideoPage></VideoPage>
+    <>
+      <ContextProvider>
+        <BrowserRouter>
+          <CoursesRouter />
+        </BrowserRouter>
+      </ContextProvider>
+    </>
   );
 }
