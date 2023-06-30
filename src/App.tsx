@@ -1,13 +1,15 @@
 "use client";
 
+import { VideoPage } from "./app/pages/VideoPage";
 import { CoursesRouter } from "./routes/CoursesRouter";
 import { BrowserRouter } from "react-router-dom";
 
 export default function Home() {
   return (
-    <BrowserRouter>
+   /* <BrowserRouter>
       <CoursesRouter />
-    </BrowserRouter>
+    </BrowserRouter>*/
     //<Dashboard />
+    <VideoPage></VideoPage>
   );
 }
