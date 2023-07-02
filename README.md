@@ -6,9 +6,13 @@ Una aplicacion de cursos en linea aplicando React para la interfaz de usuario y 
 
 https://drive.google.com/drive/folders/1XJvsnldbpTtQLiv5p3-B58OonyS5JnQn?usp=sharing
 
+## Link repositorio strapi:
+
+https://github.com/TDVCool123/cursos-strapi.git
+
 ## Requerimientos
 
-El proyecto en cuestion consta de una aplicacion de cursos en linea donde un usuario puede buscar cursos, subscribirse a estos y ver el contenido de los cursos. Para esto se pone en practica los conocimientos de React para el manejo de la interfaz de usuario y Strapi como manejo de la base de datos utilizada como backend del proyecto. Entre los Requerimientos tecnicos se encuentran: 
+El proyecto en cuestion consta de una aplicacion de cursos en linea donde un usuario puede buscar cursos, subscribirse a estos y ver el contenido de los cursos. Para esto se pone en practica los conocimientos de React para el manejo de la interfaz de usuario y Strapi como manejo de la base de datos utilizada como backend del proyecto. Entre los Requerimientos tecnicos se encuentran:
 
 - Configura una aplicación de React.js con Next.js.
 - Crea un backend utilizando Strapi para gestionar los cursos y usuarios de la plataforma.
