@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { Dashboard } from "../pages/Dashboard";
 import { SearchCourses } from "../pages/SearchCourses";
 import { GuardedRoute } from "../../guards/GuardedRoutes";
+import { VideoPage } from "../pages/VideoPage";
 
 export const AppRoute = () => {
   return (
@@ -22,6 +23,14 @@ export const AppRoute = () => {
             {" "}
             <SearchCourses />{" "}
           </GuardedRoute>
+        }
+      />
+      <Route
+        path="video"
+        element={
+    
+            <VideoPage/>
+        
         }
       />
       <Route path="/*" element={<Navigate to="/home" />}></Route>
