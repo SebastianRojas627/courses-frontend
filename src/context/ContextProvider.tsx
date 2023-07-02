@@ -1,20 +1,18 @@
-import { createContext, useReducer, useContext } from "react";
-import reducer, { initialValues } from "./reducer";
+import { createContext, useState } from "react";
 
-const StoreContext = createContext();
+const UserContext = createContext(undefined);
+const UserDispatchContext = createContext(undefined);
 
 const ContextProvider = ({ children }) => {
+  const [userCourses, setUserCourses] = useState([]);
+
   return (
-    <StoreContext.Provider value={useReducer(reducer, initialValues)}>
-      {children}
-    </StoreContext.Provider>
+    <UserContext.Provider value={userCourses}>
+      <UserDispatchContext.Provider value={setUserCourses}>
+        {children}
+      </UserDispatchContext.Provider>
+    </UserContext.Provider>
   );
 };
 
-const useStore = () => {
-  return useContext(StoreContext)[0];
-};
-const useDispatch = () => useContext(StoreContext)[1];
-
-export { StoreContext, useStore, useDispatch };
-export default ContextProvider;
+export { ContextProvider, UserContext, UserDispatchContext };

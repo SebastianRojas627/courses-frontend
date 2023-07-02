@@ -3,11 +3,7 @@ import { AppLayout } from "../layouts/AppLayout";
 import { courseInfor } from "../../data/data";
 import { CourseCard } from "../components/CourseCard";
 
-export const SearchCourses = ({ userCourses, setUserCourses }) => {
-  const addCourse = (course) => {
-    setUserCourses([...userCourses, course]);
-  };
-
+export const SearchCourses = () => {
   return (
     <>
       <AppLayout>
@@ -17,8 +13,7 @@ export const SearchCourses = ({ userCourses, setUserCourses }) => {
             <CourseCard
               key={course.id}
               course={course}
-              addCourse={addCourse}
-              setUserCourses={setUserCourses}
+              buttonText={"Agregar"}
             />
           ))}
         </div>

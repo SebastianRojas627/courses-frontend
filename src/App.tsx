@@ -1,4 +1,4 @@
-import ContextProvider from "./context/ContextProvider";
+import { ContextProvider } from "./context/ContextProvider";
 import { CoursesRouter } from "./routes/CoursesRouter";
 import { BrowserRouter } from "react-router-dom";
 
