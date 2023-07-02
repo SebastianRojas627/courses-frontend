@@ -1,10 +1,12 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { AuthLayout } from "../layouts/AuthLayout";
 import { useNavigate } from "react-router-dom";
-import { types } from "../../context/reducer";
+import { AuthDispatchContext } from "../../context/AuthProvider";
+import { useContext } from "react";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
+  const setAuth = useContext(AuthDispatchContext);
 
   type User = {
     name: String;
@@ -22,6 +24,7 @@ const RegisterPage = () => {
   } = useForm<User>();
 
   const onSubmit: SubmitHandler<User> = (data) => {
+    setAuth(true);
     console.log(data);
     navigate("/");
   };

@@ -1,7 +1,6 @@
 import { Carousel } from "../components/Carousel";
 import { Title } from "../components/Title";
 import { AppLayout } from "../layouts/AppLayout";
-import { CourseCard } from "../components/CourseCard";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/ContextProvider";
 import { useContext } from "react";
